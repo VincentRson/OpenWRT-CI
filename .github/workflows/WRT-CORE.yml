@@ -152,6 +152,9 @@ jobs:
         run: |
           cd ./wrt/
 
+          # 追加 OAF 源（destan19/OpenAppFilter，6.18 已兼容）
+          echo "src-git oaf https://github.com/destan19/OpenAppFilter.git" >> feeds.conf.default
+
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
